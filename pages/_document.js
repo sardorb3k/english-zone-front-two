@@ -15,7 +15,7 @@ export default function Document() {
         <NextScript />
         <script src="static/js/vendor/jquery-3.5.1.min.js" async />
         <script src="static/js/swiper-bundle.js" async />
-        <script src="static/js/ajax-form.js" async />
+        {/* <script src="static/js/ajax-form.js" async /> */}
         <script src="static/js/bootstrap.bundle.min.js" async />
         <script src="static/js/imagesloaded.pkgd.min.js" async />
         <script src="static/js/isotope.pkgd.min.js" async />
