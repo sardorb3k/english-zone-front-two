@@ -14,7 +14,7 @@ const Teacher = () => {
                 Barcha{" "}
                 <span className="yellow-bg">
                   {" "}
-                  O'qituvchilar <img
+                  O`qituvchilar <img
                     src={ImageYellow.src}
                     alt=""
                   />{" "}
@@ -22,7 +22,7 @@ const Teacher = () => {
                 <br />
               </h2>
               <p>
-                You don't have to struggle alone, you've got our assistance and
+                You don`t have to struggle alone, you`ve got our assistance and
                 help.
               </p>
             </div>

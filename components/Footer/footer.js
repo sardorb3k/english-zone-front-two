@@ -18,7 +18,7 @@ const Footer = () => {
                   </div>
                   <div className="footer__widget-body">
                     <p>
-                      Biz eng yaxshi o'quv markaz deb bilamiz uzimizni ...
+                      Biz eng yaxshi o`quv markaz deb bilamiz uzimizni ...
                     </p>
 
                     <div className="footer__social">

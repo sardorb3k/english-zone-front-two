@@ -27,7 +27,7 @@ const Course = () => {
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-4">
             <div className="category__more mb-60 float-md-end fix">
               <a href="course-grid.html" className="link-btn">
-              Barcha kurslarni ko'rish
+              Barcha kurslarni ko`rish
                 <i className="far fa-arrow-right"></i>
                 <i className="far fa-arrow-right"></i>
               </a>

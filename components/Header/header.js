@@ -78,7 +78,7 @@ const Header = () => {
                         <Link href="/about">Biz haqimizda</Link>
                       </li>
                       <li className="english-zone-nav">
-                        <Link href="/contact">Biz bilan bog'lanish</Link>
+                        <Link href="/contact">Biz bilan bog`lanish</Link>
                       </li>
                     </ul>
                   </nav>
