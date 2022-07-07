@@ -26,7 +26,7 @@ const Slider__height = () => {
                   for you.
                 </h3>
                 <p>
-                  Meet university,and cultural institutions, who'll share their
+                  Meet university,and cultural institutions, who`ll share their
                   experience.
                 </p>
                 <a href="about.html" className="e-btn slider__btn">
@@ -54,7 +54,7 @@ const Slider__height = () => {
                   Learn
                 </h3>
                 <p>
-                  Meet university,and cultural institutions, who'll share their
+                  Meet university,and cultural institutions, who`ll share their
                   experience.
                 </p>
                 <a href="about.html" className="e-btn slider__btn">
@@ -82,7 +82,7 @@ const Slider__height = () => {
                   & learn.
                 </h3>
                 <p>
-                  Meet university,and cultural institutions, who'll share their
+                  Meet university,and cultural institutions, who`ll share their
                   experience.
                 </p>
                 <a href="about.html" className="e-btn slider__btn">
@@ -110,7 +110,7 @@ const Slider__height = () => {
                   learning Platform.
                 </h3>
                 <p>
-                  Meet university,and cultural institutions, who'll share their
+                  Meet university,and cultural institutions, who`ll share their
                   experience.
                 </p>
                 <a href="about.html" className="e-btn slider__btn">
