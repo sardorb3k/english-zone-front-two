@@ -28,7 +28,7 @@ const Teacher = () => {
 
   // Image Loader for Teachers
   const myLoader = ({ src }) => {
-    return `api/images/${src}`;
+    return `http://185.241.53.98:8686/teachers/${src}`;
   };
   return (
     <section className="teacher__area pt-115 pb-100">
