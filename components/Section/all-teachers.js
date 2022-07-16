@@ -22,7 +22,7 @@ const Teacher = () => {
               <div className="teacher__item text-center grey-bg-5 transition-3 mb-30">
                 <div className="teacher__thumb w-img fix">
                   <a href="#">
-                    <img src={`http://185.241.53.98:8686/teachers/${item.imagePath}`} alt="" />
+                    <img src={`/api/images/${item.imagePath}`} alt="" />
                   </a>
                 </div>
                 <div className="teacher__content">
