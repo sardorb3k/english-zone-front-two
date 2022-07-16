@@ -40,11 +40,11 @@ const Teacher = () => {
                 Bizning{" "}
                 <span className="yellow-bg">
                   {" "}
-                  O'qituvchilar <img src={ImageYellow.src} alt="" />{" "}
+                  O&apos;qituvchilar <img src={ImageYellow.src} alt="" />{" "}
                 </span>{" "}
                 <br />
               </h2>
-              <p>Har bir o'quvchimiz IELTS 7+ dan bahoga ega</p>
+              <p>Har bir o&apos;quvchimiz IELTS 7+ dan bahoga ega</p>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@ const Teacher = () => {
                   onClick={showMoreItems}
                   className="e-btn e-btn-border e-btn-5"
                 >
-                  Boshqa o'qituvchilar
+                  Boshqa o&apos;qituvchilar
                 </button>
               </div>
             </div>
