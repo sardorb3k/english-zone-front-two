@@ -6846,7 +6846,7 @@ p.checkout-coupon input[type=text]:focus {
   opacity: 0;
 }
 .slider__title {
-  font-size: 70px;
+  font-size: 50px;
   color: #ffffff;
   line-height: 1.05;
   margin-bottom: 5px;
@@ -8426,7 +8426,7 @@ p.checkout-coupon input[type=text]:focus {
   font-size: 15px;
   width: 44px;
   height: 44px;
-  line-height: 46px;
+  line-height: 40px;
   text-align: center;
   border: 2px solid #285da1;
   background: #285da1;

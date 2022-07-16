@@ -1,8 +1,8 @@
 import ImageCtaOne from "../../static/images/cta/cta-shape-1.png";
 import ImageCtaTwo from "../../static/images/cta/cta-shape-2.png";
-const test = () => {
+const Test = () => {
   return (
-    <section className="cta__area pb-150">
+    <section className="cta__area pb-150" id="test">
       <div className="container">
         <div className="cta__inner-3 p-relative grey-bg-2 pt-75 pb-75 fix">
           <div className="cta__shape-3">
@@ -39,4 +39,4 @@ const test = () => {
     </section>
   );
 };
-export default test;
+export default Test;

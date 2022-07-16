@@ -5,32 +5,36 @@ import Back_2 from "../../static/images/background/back-2.jpg";
 import Back_3 from "../../static/images/background/back-3.jpg";
 import { useEffect, useState } from "react";
 import $ from "jquery";
+import Head from "next/head";
 
 const Slider__height = () => {
   return (
     <div className="swiper-wrapper">
+      <Head>
+        <script src="static/js/swiper-bundle.js" async />
+      </Head>
       <div
         className="single-slider swiper-slide slider__height slider__overlay d-flex align-items-center"
         data-background={Back_1.src}
       >
         <div className="container">
-          <div className="row">
+          <div className="english-zone-row row">
             <div className="col-xxl-7 col-xl-8 col-lg-9 col-md-9 col-sm-10">
               <div className="slider__content">
-                <span>Learn & Achieve</span>
-                <h3 className="slider__title">
-                  Find the right Online{" "}
+                <span>ENGLISH ZONE</span>
+                <h5 className="slider__title">
                   <span className="yellow-bg">
-                    tutor <img src={YellowBg.src} alt="" />{" "}
+                    IELTS 7.0 <img src={YellowBg.src} alt="" />
                   </span>{" "}
-                  for you.
-                </h3>
+                  va undan yuqori ballni birinchi imtihonning o'zidayoq qo'lga
+                  kiriting
+                </h5>
                 <p>
-                  Meet university,and cultural institutions, who`ll share their
-                  experience.
+                  2 yil davomida 1,000 dan ziyod inson ENGLISH ZONE markazida
+                  tahsil olgan
                 </p>
                 <a href="about.html" className="e-btn slider__btn">
-                  Ready to get Started?
+                  Birinchi darsga yozilish
                 </a>
               </div>
             </div>
@@ -42,7 +46,7 @@ const Slider__height = () => {
         data-background={Back_2.src}
       >
         <div className="container">
-          <div className="row">
+          <div className="english-zone-row row">
             <div className="col-xxl-7 col-xl-8 col-lg-9 col-md-9 col-sm-10">
               <div className="slider__content">
                 <span>Learn & Achieve</span>
@@ -70,7 +74,7 @@ const Slider__height = () => {
         data-background={Back_3.src}
       >
         <div className="container">
-          <div className="row">
+          <div className="english-zone-row row">
             <div className="col-xxl-7 col-xl-8 col-lg-9 col-md-9 col-sm-10">
               <div className="slider__content">
                 <span>Learn & Achieve</span>
@@ -98,7 +102,7 @@ const Slider__height = () => {
         data-background={Back_3.src}
       >
         <div className="container">
-          <div className="row">
+          <div className="english-zone-row row">
             <div className="col-xxl-7 col-xl-8 col-lg-9 col-md-9 col-sm-10">
               <div className="slider__content">
                 <span>Learn & Achieve</span>
@@ -197,8 +201,7 @@ const SectionSlider = () => {
       <div className="slider__wrapper swiper-container">
         <Slider__height />
       </div>
-      <div className="swiper-container slider__nav d-none d-md-block">
-      </div>
+      <div className="swiper-container slider__nav d-none d-md-block"></div>
     </section>
   );
 };

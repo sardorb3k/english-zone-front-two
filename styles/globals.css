@@ -1,3 +1,12 @@
+.english-zone-row {
+    --bs-gutter-x: 0;
+}
+.english-zone-iframe{
+    width: 100%;
+    min-height: 300px;
+
+}
+
 @import url(preloader.css);
 @import url(bootstrap.min.css);
 @import url(meanmenu.css);

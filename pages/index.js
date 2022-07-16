@@ -12,6 +12,9 @@ import { useEffect, useState } from "react";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Bosh sahifa</title>
+      </Head>
       <SectionSlider />
       {/* <SectionAbout /> */}
       <SectionCourses />

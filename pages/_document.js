@@ -1,14 +1,23 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import $ from "jquery";
+import loader from "../styles/loader";
 
 import Header from "../components/Header/header";
-export default function Document() {
 
+// import Logo from "../static/images/logo-black.png";
+export default function Document() {
   return (
     <Html>
-      <Head />
+      <Head>
+        <style>{loader}</style>
+      </Head>
       <body>
         <Header />
+        <div id={"globalLoader"}>
+          <div className="loader">
+            <img src="static/images/logo-black.png" alt="Logo" width={90} height={90}/>
+          </div>
+        </div>
         <div className="body-overlay"></div>
         <main>
           <Main />

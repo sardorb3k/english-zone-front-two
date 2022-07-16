@@ -1,9 +1,35 @@
-import ImageTeacherOne from '../../static/images/teacher/teacher-1.jpg';
-import ImageTeacherTwo from '../../static/images/teacher/teacher-2.jpg';
-import ImageTeacherFo from '../../static/images/teacher/teacher-3.jpg';
 import ImageYellow from "../../static/images/shape/yellow-bg-2.png";
-
+import { useState, useEffect } from "react";
+import Image from "next/image";
 const Teacher = () => {
+  const [teachers, setTeachers] = useState([]);
+  const [visible, setVisible] = useState(3);
+  // UseState for pagination
+  const [isLoading, setLoading] = useState(true);
+  // Show more teachers on click
+  const showMoreItems = () => {
+    if (visible != teachers.length && teachers.length - visible > 3) {
+      setVisible((prevValue) => prevValue + 3);
+    } else {
+      setVisible((prevValue) => prevValue + teachers.length - visible);
+      setLoading(false);
+    }
+  };
+  // Data fetching from server
+  async function fetchTeachers() {
+    const request = await fetch("/api/teachers");
+    const data = await request.json();
+    setTeachers(data);
+  }
+  // Data is fetched only once
+  useEffect(() => {
+    fetchTeachers();
+  }, []);
+
+  // Image Loader for Teachers
+  const myLoader = ({ src }) => {
+    return `api/images/${src}`;
+  };
   return (
     <section className="teacher__area pt-115 pb-100">
       <div className="container">
@@ -11,139 +37,56 @@ const Teacher = () => {
           <div className="col-xxl-6 offset-xxl-3">
             <div className="section__title-wrapper text-center mb-60">
               <h2 className="section__title">
-                Barcha{" "}
+                Bizning{" "}
                 <span className="yellow-bg">
                   {" "}
-                  O`qituvchilar <img
-                    src={ImageYellow.src}
-                    alt=""
-                  />{" "}
+                  O'qituvchilar <img src={ImageYellow.src} alt="" />{" "}
                 </span>{" "}
                 <br />
               </h2>
-              <p>
-                You don`t have to struggle alone, you`ve got our assistance and
-                help.
-              </p>
+              <p>Har bir o'quvchimiz IELTS 7+ dan bahoga ega</p>
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-            <div className="teacher__item text-center grey-bg-5 transition-3 mb-30">
-              <div className="teacher__thumb w-img fix">
-                <a href="#">
-                  <img src={ImageTeacherOne.src} alt="" />
-                </a>
-              </div>
-              <div className="teacher__content">
-                <h3 className="teacher__title">
-                  <a href="instructor-details.html">Lillian Walsh,</a>
-                </h3>
-                <span> CO Founder</span>
-
-                <div className="teacher__social">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i className="social_facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="social_twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="social_vimeo"></i>
-                      </a>
-                    </li>
-                  </ul>
+          {/* Teachers map */}
+          {teachers.slice(0, visible).map((item, index) => (
+            <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6" key={index}>
+              <div className="teacher__item text-center grey-bg-5 transition-3 mb-30">
+                <div className="teacher__thumb w-img fix">
+                  <Image
+                    loader={myLoader}
+                    src={item.imagePath}
+                    width={500}
+                    height={500}
+                    alt={item.fullName}
+                  />
+                </div>
+                <div className="teacher__content">
+                  <h3 className="teacher__title">
+                    <a href="instructor-details.html">{item.fullName}</a>
+                  </h3>
+                  <br />
+                  <span> IELTS: {item.IELTS}</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-            <div className="teacher__item text-center grey-bg-5 transition-3 mb-30">
-              <div className="teacher__thumb w-img fix">
-                <a href="#">
-                  <img src={ImageTeacherTwo.src} alt="" />
-                </a>
-              </div>
-              <div className="teacher__content">
-                <h3 className="teacher__title">
-                  <a href="instructor-details.html">Kelly Franklin,</a>
-                </h3>
-                <span>Desginer</span>
-
-                <div className="teacher__social">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i className="social_facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="social_twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="social_vimeo"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-            <div className="teacher__item text-center grey-bg-5 transition-3 mb-30">
-              <div className="teacher__thumb w-img fix">
-                <a href="#">
-                  <img src={ImageTeacherFo.src} alt="" />
-                </a>
-              </div>
-              <div className="teacher__content">
-                <h3 className="teacher__title">
-                  <a href="instructor-details.html">Hilary Ouse,</a>
-                </h3>
-                <span>Markater</span>
-
-                <div className="teacher__social">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i className="social_facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="social_twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="social_vimeo"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-        <div className="row">
-          <div className="col-xxl-12">
-            <div className="teacher__more text-center mt-30">
-              <a href="contact.html" className="e-btn e-btn-border e-btn-5">
-                Become an Instructor
-              </a>
+        {isLoading && (
+          <div className="row">
+            <div className="col-xxl-12">
+              <div className="teacher__more text-center mt-30">
+                <button
+                  onClick={showMoreItems}
+                  className="e-btn e-btn-border e-btn-5"
+                >
+                  Boshqa o'qituvchilar
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

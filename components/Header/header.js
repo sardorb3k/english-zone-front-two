@@ -42,7 +42,7 @@ const Header = () => {
           .english-zone-nav {
             margin-left: 15px;
           }
-          `}</style>
+        `}</style>
         <div
           id="header-sticky"
           className="header__area header__transparent header__padding-2"
@@ -53,13 +53,15 @@ const Header = () => {
                 <div className="header__left d-flex">
                   <div className="logo">
                     <Link href="/">
-                      <img
-                        src={LogoWhite.src}
-                        width={60}
-                        height={60}
-                        alt="logo"
-                        className="logo-white"
-                      />
+                      <a>
+                        <img
+                          src={LogoWhite.src}
+                          width={80}
+                          height={80}
+                          alt="logo"
+                          className="logo-white"
+                        />
+                      </a>
                     </Link>
                   </div>
                 </div>
@@ -68,9 +70,9 @@ const Header = () => {
                 <div className="main-menu main-menu-3">
                   <nav id="mobile-menu">
                     <ul>
-                      <li>
+                      {/* <li>
                         <Link href="/">Bosh sahifa</Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href="/courses">Kurslar</Link>
                       </li>
@@ -87,9 +89,9 @@ const Header = () => {
               <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-6 col-sm-6 col-6">
                 <div className="header__right d-flex justify-content-end align-items-center">
                   <div className="header__btn header__btn-2 ml-30 d-none d-sm-block">
-                    <a href="sign-up.html" className="e-btn">
-                      TEST TOPSHIRISH
-                    </a>
+                    <Link href="/#test">
+                      <a className="e-btn">TEST TOPSHIRISH</a>
+                    </Link>
                   </div>
                   <div className="sidebar__menu d-xl-none">
                     <div
@@ -119,20 +121,14 @@ const Header = () => {
           </div>
           <div className="sidebar__content">
             <div className="logo mb-40">
-              <a href="index.html">
-                <img src={LogoWhite.src} alt="logo" />
-              </a>
+              <Link href="/">
+                <a>
+                  <img src={LogoWhite.src} alt="logo" />
+                </a>
+              </Link>
             </div>
             <div className="mobile-menu fix"></div>
 
-            <div className="sidebar__search p-relative mt-40 ">
-              <form action="#">
-                <input type="text" placeholder="Search..." />
-                <button type="submit">
-                  <i className="fad fa-search"></i>
-                </button>
-              </form>
-            </div>
             <div className="sidebar__cart mt-30">
               <a href="#">
                 <div className="header__cart-icon">
