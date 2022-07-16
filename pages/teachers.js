@@ -9,9 +9,9 @@ const Teachers = () => {
   return (
     <>
       <Head>
-        <title>Bizning O'qituvchilar</title>
+        <title>Bizning O&apos;qituvchilar</title>
       </Head>
-      <Breadcrumb title="Bizning O'qituvchilar" />
+      <Breadcrumb title="Bizning O&apos;qituvchilar" />
       <SectionTeachers />
       <SectionTest />
       <Banner />

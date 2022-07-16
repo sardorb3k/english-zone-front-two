@@ -23,7 +23,7 @@ const Counter = () => {
                   </span>
                 </h2>
                 <p>
-                  You don't have to struggle alone, you've got our assistance
+                  You don&apos;t have to struggle alone, you&apos;ve got our assistance
                   and help.
                 </p>
               </div>

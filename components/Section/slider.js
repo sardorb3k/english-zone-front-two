@@ -26,7 +26,7 @@ const Slider__height = () => {
                   <span className="yellow-bg">
                     IELTS 7.0 <img src={YellowBg.src} alt="" />
                   </span>{" "}
-                  va undan yuqori ballni birinchi imtihonning o'zidayoq qo'lga
+                  va undan yuqori ballni birinchi imtihonning o&apos;zidayoq qo&apos;lga
                   kiriting
                 </h5>
                 <p>

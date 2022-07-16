@@ -162,7 +162,7 @@ const Testimonial = () => {
                   <div className="testimonial__video-text">
                     <h4>Course Outcome</h4>
                     <p>
-                      Faff about A bit of how's your father getmate cack
+                      Faff about A bit of how&apos;s your father getmate cack
                       codswallop crikey argy-bargy cobblers lost his bottle.
                     </p>
                   </div>

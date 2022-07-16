@@ -18,9 +18,9 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>Biz bilan bog'lanish</title>
+        <title>Biz bilan bog&apos;lanish</title>
       </Head>
-      <Breadcrumb title="Biz bilan bog`lanish" />
+      <Breadcrumb title="Biz bilan bog&apos;lanish" />
       <section className="contact__area pt-115 pb-120">
         <div className="container">
           <div className="row">
@@ -125,10 +125,9 @@ const Contact = () => {
                           <h4>ENGLISH ZONE Idorasi</h4>
                           <p>
                             <a
-                              target="_blank"
                               href="https://goo.gl/maps/rur8SJ5PmJKAriKU6"
                             >
-                              Navoiy shoh ko`chasi, Buxoro, O`zbekiston
+                              Navoiy shoh ko&apos;chasi, Buxoro, O&apos;zbekiston
                             </a>
                           </p>
                         </div>
@@ -227,7 +226,7 @@ const Contact = () => {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1533.560713870213!2d64.42304754784651!3d39.75938199856671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f50076685c6a62d%3A0x28acbba34f0d5f33!2sENGLISH%20ZONE!5e0!3m2!1suz!2s!4v1657729263772!5m2!1suz!2s"
           width="100%"
           height="600"
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>

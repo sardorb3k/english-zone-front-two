@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Bizning O'qituvchilar</title>
+        <title>Bizning O&apos;qituvchilar</title>
       </Head>
       <Breadcrumb title="Biz haqimizda" />
       <Testimonial />
