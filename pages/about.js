@@ -1,17 +1,18 @@
-import Breadcrumb from "../components/Breadcrumb/breadcrumb";
+import Head from "next/head";
+// Components
 import Footer from "../components/Footer/footer";
 import Banner from "../components/Section/banner";
 import Counter from "../components/Section/counter";
-import Testimonial from "../components/Section/testimonial";
-import Why_area from "../components/Section/why_area";
 import SectionTest from "../components/Section/test";
-import Head from "next/head";
+import Why_area from "../components/Section/why_area";
+import Testimonial from "../components/Section/testimonial";
+import Breadcrumb from "../components/Breadcrumb/breadcrumb";
 
 const About = () => {
   return (
     <>
       <Head>
-        <title>Bizning O&apos;qituvchilar</title>
+        <title>Bizning haqimizda</title>
       </Head>
       <Breadcrumb title="Biz haqimizda" />
       <Testimonial />

@@ -1,5 +1,36 @@
+// Images
 import ImageCtaOne from "../../static/images/cta/cta-shape-1.png";
 import ImageCtaTwo from "../../static/images/cta/cta-shape-2.png";
+  // Send message to backend
+  const submitContact = async (event) => {
+    event.preventDefault();
+    const fullname = document.querySelector("#fullname").value;
+    const phoneNumber = document.querySelector("#phoneNumber").value;
+    // Check if the fields are empty
+    if (!fullname) {
+      alertMessage("Ism kiritilmadi");
+      return false;
+    }
+    if (!phoneNumber) {
+      alertMessage("Telefon kiritilmadi");
+      return false;
+    }
+    // Send the message to the backend.
+    const res = await fetch("/api/test/enroll", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fullname: event.target.fullname.value,
+        phoneNumber: event.target.phoneNumber.value,
+      }),
+    });
+    // Redirect to the next page
+    window.location.href = "/test?phoneNumber=" + phoneNumber;
+    // Message sent
+    event.target.reset();
+  };
 const Test = () => {
   return (
     <section className="cta__area pb-150" id="test">
@@ -23,9 +54,9 @@ const Test = () => {
             <div className="col-xxl-12">
               <div className="cta__form grey-bg-2">
                 <div className="cta__form-inner">
-                  <form action="#">
-                    <input type="text" placeholder="Tuliq ismingiz" />
-                    <input type="tel" pattern="[7-9]{1}[0-9]{9}" placeholder="Telefon raqamingiz"  />
+                  <form onSubmit={submitContact}>
+                    <input type="text" placeholder="Tuliq ismingiz" name="fullname" id="fullname" />
+                    <input type="tel" placeholder="Telefon raqamingiz" name="phoneNumber" id="phoneNumber" />
                     <button type="submit" className="e-btn e-btn-6">
                       Testni boshlash
                     </button>

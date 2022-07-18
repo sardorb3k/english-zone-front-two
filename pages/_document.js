@@ -1,10 +1,10 @@
-import { Html, Head, Main, NextScript } from "next/document";
 import $ from "jquery";
+import { Html, Head, Main, NextScript } from "next/document";
+// Components
+import Header from "../components/Header/header";
+// Styles
 import loader from "../styles/loader";
 
-import Header from "../components/Header/header";
-
-// import Logo from "../static/images/logo-black.png";
 export default function Document() {
   return (
     <Html>
@@ -15,7 +15,12 @@ export default function Document() {
         <Header />
         <div id={"globalLoader"}>
           <div className="loader">
-            <img src="static/images/logo-black.png" alt="Logo" width={90} height={90}/>
+            <img
+              src="static/images/logo-black.png"
+              alt="Logo"
+              width={90}
+              height={90}
+            />
           </div>
         </div>
         <div className="body-overlay"></div>
@@ -25,7 +30,6 @@ export default function Document() {
         <NextScript />
         <script src="static/js/vendor/jquery-3.5.1.min.js" async />
         <script src="static/js/swiper-bundle.js" async />
-        {/* <script src="static/js/ajax-form.js" async /> */}
         <script src="static/js/bootstrap.bundle.min.js" async />
         <script src="static/js/imagesloaded.pkgd.min.js" async />
         <script src="static/js/isotope.pkgd.min.js" async />

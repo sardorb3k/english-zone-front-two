@@ -1,10 +1,13 @@
-import Link from "next/link";
-import Title_background from "../../static/images/background/back-2.jpg";
-import { useEffect, useState } from "react";
 import $ from "jquery";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+// Image background
+import Title_background from "../../static/images/background/back-2.jpg";
+
 const Breadcrumb = ({ title }) => {
   const [featured, setFeatured] = useState(null);
   useEffect(() => {
+    // Get featured image
     $("[data-background").each(function () {
       $(this).css(
         "background-image",

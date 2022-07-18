@@ -1,18 +1,16 @@
 // Components
-import Image from "next/image";
+import $ from "jquery";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import $ from "jquery";
-
+// Images
 import LogoWhite from "../../static/images/logo-white.png";
 
 const Header = () => {
-  // UseEffect
   const [featured, setFeatured] = useState(null);
 
   useEffect(() => {
+    // Get featured image
     var windowOn = $(window);
-
     $("#mobile-menu").meanmenu({
       meanMenuContainer: ".mobile-menu",
       meanScreenWidth: "1199",
@@ -70,9 +68,6 @@ const Header = () => {
                 <div className="main-menu main-menu-3">
                   <nav id="mobile-menu">
                     <ul>
-                      {/* <li>
-                        <Link href="/">Bosh sahifa</Link>
-                      </li> */}
                       <li>
                         <Link href="/courses">Kurslar</Link>
                       </li>

@@ -18,3 +18,9 @@
 @import url(elegantFont.css);
 @import url(default.css);
 @import url(style.css);
+@media (min-width:1200px) {
+    .english-zone-col-xl-3-5{
+        flex: 0 0 auto;
+        width: 24%;
+    }
+}

@@ -1,11 +1,12 @@
 import Image from "next/image";
+// Images
+import ImageAbout from "../../static/images/about/about.jpg";
+import ImageYellow from "../../static/images/shape/yellow-bg-2.png";
 import ImageStudentFa from "../../static/images/about/student-4.jpg";
 import ImageStudentFo from "../../static/images/about/student-3.jpg";
 import ImageStudentTwo from "../../static/images/about/student-2.jpg";
 import ImageStudentOne from "../../static/images/about/student-1.jpg";
-import ImageAbout from "../../static/images/about/about.jpg";
 import ImageAboutBanner from "../../static/images/about/about-banner.jpg";
-import ImageYellow from "../../static/images/shape/yellow-bg-2.png";
 const SectionAbout = () => {
   return (
     <section className="about__area pt-120 pb-150">

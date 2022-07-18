@@ -1,9 +1,10 @@
-import Breadcrumb from "../components/Breadcrumb/breadcrumb";
+import Head from "next/head";
+// Components 
 import Footer from "../components/Footer/footer";
 import Banner from "../components/Section/banner";
 import SectionTest from "../components/Section/test";
+import Breadcrumb from "../components/Breadcrumb/breadcrumb";
 import SectionTeachers from "../components/Section/all-teachers";
-import Head from "next/head";
 
 const Teachers = () => {
   return (

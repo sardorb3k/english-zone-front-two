@@ -1,14 +1,14 @@
-import ImageYellow from "../../static/images/shape/yellow-bg-2.png";
 import { useState, useEffect } from "react";
+// Images
+import ImageYellow from "../../static/images/shape/yellow-bg-2.png";
 const Teacher = () => {
   const [teachers, setTeachers] = useState([]);
-
+  // Data fetching from server
   async function fetchTeachers() {
     const request = await fetch("/api/teachers");
     const data = await request.json();
-    setTeachers(data);
+    setTeachers(data.data);
   }
-
   useEffect(() => {
     fetchTeachers();
   }, []);
@@ -16,7 +16,6 @@ const Teacher = () => {
     <section className="teacher__area pt-115 pb-100">
       <div className="container">
         <div className="row">
-          {/* Teachers map */}
           {teachers.map((item, index) => (
             <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6" key={index}>
               <div className="teacher__item text-center grey-bg-5 transition-3 mb-30">

@@ -2627,16 +2627,19 @@ p {
 }
 .course__title a:hover {
   color: #2b4eff;
+  text-align: center;
 }
 .course__title-2 {
   font-size: 24px;
   margin-bottom: 2px;
+  text-align: center;
 }
 .course__title-2 a:hover {
   color: #2b4eff;
 }
 .course__title-3 {
   font-size: 36px;
+  text-align: center;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .course__title-3 {
@@ -2662,10 +2665,10 @@ p {
   padding: 25px 30px;
 }
 .course__content-2 {
-  padding-top: 25px;
+  padding: 25px;
 }
 .course__content-2 p {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .course__content-3 {
   padding-left: 80px;
@@ -7328,6 +7331,12 @@ p.checkout-coupon input[type=text]:focus {
   line-height: 18px;
   padding-right: 13px;
 }
+.page__title-others-height {
+  min-height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .page__title-height {
   min-height: 450px;
   background-position: center;
@@ -7635,7 +7644,7 @@ p.checkout-coupon input[type=text]:focus {
   display: inline-block;
   width: 40px;
   height: 40px;
-  line-height: 44px;
+  line-height: 40px;
   text-align: center;
   font-size: 13px;
   color: #0e1133;

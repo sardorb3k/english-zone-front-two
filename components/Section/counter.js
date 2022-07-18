@@ -1,13 +1,4 @@
-import { useEffect, useState } from "react";
-import $ from "jquery";
 const Counter = () => {
-  const [featured, setFeatured] = useState(null);
-  useEffect(() => {
-    // $(".counter").counterUp({
-    //   delay: 10,
-    //   time: 1000,
-    // });
-  }, [featured]);
   return (
     <>
       <section className="counter__area pt-145 pb-100">
@@ -23,8 +14,8 @@ const Counter = () => {
                   </span>
                 </h2>
                 <p>
-                  You don&apos;t have to struggle alone, you&apos;ve got our assistance
-                  and help.
+                  You don&apos;t have to struggle alone, you&apos;ve got our
+                  assistance and help.
                 </p>
               </div>
             </div>
@@ -143,4 +134,3 @@ const Counter = () => {
   );
 };
 export default Counter;
-//

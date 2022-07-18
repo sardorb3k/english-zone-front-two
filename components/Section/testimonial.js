@@ -1,12 +1,13 @@
-import Image from "next/image";
-import Background from "../../static/images/testimonial/home-3/testimonial-bg-3.jpg";
-import Icon from "../../static/images/svg-testimonial.svg";
-
-import { useEffect, useState } from "react";
 import $ from "jquery";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+// Images
+import Icon from "../../static/images/svg-testimonial.svg";
+import Background from "../../static/images/testimonial/home-3/testimonial-bg-3.jpg";
 const Testimonial = () => {
   const [featured, setFeatured] = useState(null);
   useEffect(() => {
+    // Get featured image
     $("[data-background").each(function () {
       $(this).css(
         "background-image",

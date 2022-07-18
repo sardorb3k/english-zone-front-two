@@ -1,6 +1,7 @@
-import ImageYellow from "../../static/images/shape/yellow-bg-2.png";
-import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+// Image
+import ImageYellow from "../../static/images/shape/yellow-bg-2.png";
 const Teacher = () => {
   const [teachers, setTeachers] = useState([]);
   const [visible, setVisible] = useState(3);
@@ -19,7 +20,7 @@ const Teacher = () => {
   async function fetchTeachers() {
     const request = await fetch("/api/teachers");
     const data = await request.json();
-    setTeachers(data);
+    setTeachers(data.data);
   }
   // Data is fetched only once
   useEffect(() => {
@@ -67,6 +68,7 @@ const Teacher = () => {
                     <a href="instructor-details.html">{item.fullName}</a>
                   </h3>
                   <br />
+                  <span> Tajriba: {item.experience || 1} yil</span><br />
                   <span> IELTS: {item.IELTS}</span>
                 </div>
               </div>

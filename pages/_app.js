@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import { useEffect } from "react";
 function MyApp({ Component, pageProps }) {
-  // Hide splash screen shen we are server side
+  // Loading animation
   useEffect(() => {
     if (typeof window !== "undefined") {
       const loader = document.getElementById("globalLoader");
