@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/router'
 // Components
 import Footer from "../../components/Footer/footer";
 import SectionBanner from "../../components/Section/banner";
@@ -8,18 +9,19 @@ import SectionCourse from "../../components/Section/all-courses";
 import Title_background from "../../static/images/background/back-2.jpg";
 import ImageCtaOne from "../../static/images/cta/cta-shape-1.png";
 import ImageCtaTwo from "../../static/images/cta/cta-shape-2.png";
-const Courses = () => {
-  const [courses, setQuiz] = useState([]);
+const Courses = (props) => {
+  const [quiz, setQuiz] = useState([]);
   const [featured, setFeatured] = useState(null);
   const [counter, setCounter] = useState(0);
-
+  const { query } = useRouter();
   // Data fetching from server
-  async function fetchCourses() {
-    const request = await fetch("/api/courses");
+  async function fetchQuiz() {
+    const id = query.id;
+    console.log(id)
+    const request = await fetch("/api/test/quiz?id=" + id);
     const data = await request.json();
     setQuiz(data.data);
   }
-
 
   useEffect(() => {
     // Get featured image
@@ -31,6 +33,7 @@ const Courses = () => {
       $(this).css("background-size", "cover");
     });
     setInterval(() => setCounter((prevValue) => prevValue + 1), 60000);
+    fetchQuiz();
   }, [featured]);
 
   return (
@@ -73,7 +76,7 @@ const Courses = () => {
                 <div className="cta__content text-center p-relative">
                   <span>ENGLISH ZONE</span>
                   <h3 className="cta__title-2">
-                    Ingliz tilini bilish darajasini aniqlang.
+                    {quiz}
                   </h3>
                 </div>
               </div>
@@ -81,10 +84,7 @@ const Courses = () => {
             <div className="row">
               <div className="col-xxl-12">
                 <div className="cta__form grey-bg-2">
-                  <div className="cta__form-inner">
-
-                    111111
-                  </div>
+                  <div className="cta__form-inner">111111</div>
                 </div>
               </div>
             </div>

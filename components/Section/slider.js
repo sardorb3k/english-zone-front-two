@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 // Images
 import YellowBg from "../../static/images/shape/yellow-bg.png";
+import Back from "../../static/images/back.jpg";
 import Back_1 from "../../static/images/background/back-1.jpg";
 import Back_2 from "../../static/images/background/back-2.jpg";
 import Back_3 from "../../static/images/background/back-3.jpg";
@@ -15,7 +16,7 @@ const Slider__height = () => {
       </Head>
       <div
         className="single-slider swiper-slide slider__height slider__overlay d-flex align-items-center"
-        data-background={Back_1.src}
+        data-background={Back.src}
       >
         <div className="container">
           <div className="english-zone-row row">

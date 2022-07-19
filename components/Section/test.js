@@ -1,37 +1,35 @@
 // Images
 import ImageCtaOne from "../../static/images/cta/cta-shape-1.png";
 import ImageCtaTwo from "../../static/images/cta/cta-shape-2.png";
+import { useEffect, useState } from "react";
+
+const Test = () => {
+  const [message_alert, setMessage] = useState("");
+
+  // Alert message
+  const alertMessage = (message) => {
+    setMessage("<div class='alert alert-danger'>" + message + "</div>");
+  };
   // Send message to backend
   const submitContact = async (event) => {
     event.preventDefault();
-    const fullname = document.querySelector("#fullname").value;
-    const phoneNumber = document.querySelector("#phoneNumber").value;
-    // Check if the fields are empty
-    if (!fullname) {
-      alertMessage("Ism kiritilmadi");
-      return false;
-    }
-    if (!phoneNumber) {
-      alertMessage("Telefon kiritilmadi");
-      return false;
-    }
-    // Send the message to the backend.
     const res = await fetch("/api/test/enroll", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        fullname: event.target.fullname.value,
+        fullName: event.target.fullName.value,
         phoneNumber: event.target.phoneNumber.value,
       }),
-    });
+    })
+    const data = await res.json();
+    // console.log(data);
     // Redirect to the next page
-    window.location.href = "/test?phoneNumber=" + phoneNumber;
+    window.location.href = "/test?id=" + data.data;
     // Message sent
     event.target.reset();
   };
-const Test = () => {
   return (
     <section className="cta__area pb-150" id="test">
       <div className="container">
@@ -55,8 +53,18 @@ const Test = () => {
               <div className="cta__form grey-bg-2">
                 <div className="cta__form-inner">
                   <form onSubmit={submitContact}>
-                    <input type="text" placeholder="Tuliq ismingiz" name="fullname" id="fullname" />
-                    <input type="tel" placeholder="Telefon raqamingiz" name="phoneNumber" id="phoneNumber" />
+                    <input
+                      type="text"
+                      placeholder="Tuliq ismingiz"
+                      name="fullName"
+                      id="fullName"
+                    />
+                    <input
+                      type="tel"
+                      placeholder="Telefon raqamingiz"
+                      name="phoneNumber"
+                      id="phoneNumber"
+                    />
                     <button type="submit" className="e-btn e-btn-6">
                       Testni boshlash
                     </button>

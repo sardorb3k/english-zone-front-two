@@ -64,11 +64,10 @@ const Teacher = () => {
                   />
                 </div>
                 <div className="teacher__content">
-                  <h3 className="teacher__title">
-                    <a href="instructor-details.html">{item.fullName}</a>
-                  </h3>
+                  <h3 className="teacher__title">{item.fullName}</h3>
                   <br />
-                  <span> Tajriba: {item.experience || 1} yil</span><br />
+                  <span> Tajriba: {item.experience || 1} yil</span>
+                  <br />
                   <span> IELTS: {item.IELTS}</span>
                 </div>
               </div>
